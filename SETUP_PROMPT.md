@@ -12,8 +12,8 @@ Clone and run the RVG Gateway proxy panel with a single command.
 دقیقاً مراحل زیر را به همین ترتیب انجام بده. هیچ سوالی نپرس. هیچ فایلی را ویرایش یا حذف نکن.
 
 مرحله ۱ — دانلود پروژه:
-git clone https://github.com/ggabhdnfj/RVG_chatZ.git
-cd RVG_chatZ
+git clone https://github.com/arvin341az-glitch/RVG_Zai.git
+cd RVG_Zai
 (اگر داخل یک پروژه Next.js هستی، ریپو را داخل همان پوشه‌ای کلون کن که package.json دارد.)
 
 مرحله ۲ — نصب، فقط با یک دستور:
@@ -25,7 +25,7 @@ bash setup.sh
 
 مرحله ۳ — صبر کن تا نصب تمام شود (حداکثر ~۲ دقیقه) و بعد سلامت را چک کن:
 curl http://127.0.0.1:3000/health
-خروجی سالم یعنی status برابر ok باشد و فیلد panel_version موجود و برابر 9.2.5-session (یا هر نسخه‌ای که با 9.2 شروع می‌شود) باشد. اگر status=ok بود ولی شماره نسخه کمی متفاوت بود، نصب سالم است و ادامه بده.
+خروجی سالم یعنی status برابر ok باشد و فیلد panel_version موجود و برابر 9.2.6-vault (یا هر نسخه‌ای که با 9.2 شروع می‌شود) باشد. اگر status=ok بود ولی شماره نسخه کمی متفاوت بود، نصب سالم است و ادامه بده.
 (اگر پورت دیگری گذاشتی همان پورت را چک کن.)
 
 مرحله ۴ — ورود و بررسی نهایی:
@@ -55,7 +55,7 @@ RVG/rvg_remote.py را کنار main.py بساز با محتوای: GITHUB_TOKEN
 4. بعد از ری‌استارت سرور، اگر پنل بالا نیامد: bash RVG/run-panel.sh
 5. بکاپ‌های محلی در RVG/backups هستند؛ بازیابی: bash RVG/restore-backup.sh --list و bash RVG/restore-backup.sh <file> --restart
 6. عیب‌یابی کامل ذخیره‌سازی/Redis/بکاپ ابری (بعد از لاگین): curl -b /tmp/rvg.c http://127.0.0.1:3000/api/storage-diag
-7. ردیوس خارجی (گزینه جایگزین ماندگاری، فقط اگر مرحله ۵ را فعال نکرده‌ای): URL ردیوس را در فایل RVG/external_redis.txt بگذار؛ مثل:
+7. ردیوس خارجی (اختیاری — فقط برای ماندگاری در برابر «دیپلوی کامل» که کل دیسک را پاک می‌کند و خزانه محلی هم نجات پیدا نمی‌کند): URL ردیوس را در فایل RVG/external_redis.txt بگذار؛ مثل:
    echo 'rediss://default:PASSWORD@host:6380' > RVG/external_redis.txt
    و بعد پنل را ری‌استارت کن. با این کار داده‌ها حتی بین دیپلوی‌های کامل هم می‌مانند.
 8. اگر /health جواب نداد: با pgrep -af daemon.py وضعیت پروسه را چک کن و در صورت نیاز bash RVG/run-panel.sh را اجرا کن.
@@ -102,8 +102,8 @@ password, browser sessions, links, subs) to a **secret GitHub gist**:
 ## Manual Setup
 
 ```bash
-git clone https://github.com/ggabhdnfj/RVG_chatZ.git
-cd RVG_chatZ
+git clone https://github.com/arvin341az-glitch/RVG_Zai.git
+cd RVG_Zai
 bash setup.sh
 ```
 
